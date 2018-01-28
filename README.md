@@ -4,7 +4,7 @@ First you install docker. Then istall docker-compose. Then clone this.
 ## Docker
 Run `docker-compose up`. This will launch 3 containers: Elasticsearch, Logstash, Kibana (see docker-compose.yml):
 | What                    | Where | How  |
-|-------------------------|:------|------|
+|-------------------------|------|------|
 | Elasticsearch (input)   | 5000  | TCP  |
 | Elasticsearch (http)    | 9200  | HTTP |
 | Logstash (input)        | 5000  | TCP  |
