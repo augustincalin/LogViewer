@@ -45,5 +45,12 @@ services:
     depends_on:
       - elasticsearch
 
+  debian1:
+    image: asampleapp
+    container_name: asampleapp
+    networks:
+      - esnet
+    command: tail -F anything
+
 networks:
   esnet:

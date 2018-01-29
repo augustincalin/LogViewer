@@ -288,3 +288,4 @@ __pycache__/
 *.xsd.cs
 .vscode
 es/elasticsearch/data
+LogViewerApp/LogViewerApp/dist/
