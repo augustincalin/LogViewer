@@ -7,6 +7,7 @@ First you install docker. Then install docker-compose. Don't forget about nc for
 Build the image in ASampleApp: `docker build -t asampleapp .`. This will create an image named asampleapp. In order to connect to the container, execute `docker exec -it aspnet bash` (after you launch it via `docker-compose up`), then launch the application: `dotnet ASampleApp.dll`. Start generating entries in the log.
 ### Docker compose
 Run `docker-compose up`. This will launch XXX containers: Elasticsearch, Logstash, Kibana, asampleapp (see docker-compose.yml):
+
  What | Where | How
  -----|-------|----
  Elasticsearch (input) | 5000 | TCP
