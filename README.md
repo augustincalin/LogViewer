@@ -1,6 +1,6 @@
 # LogViewer
 ## Install
-First you install docker. Then istall docker-compose. Then clone this.
+First you install docker. Then install docker-compose. Don't forget about nc for windows! Then clone this.
 ## Docker
 
 ### ASampleApp
@@ -13,7 +13,7 @@ Run `docker-compose up`. This will launch XXX containers: Elasticsearch, Logstas
  Elasticsearch (http) | 9200 | HTTP
  Logstash (input) | 5000 | TCP
  Kibana | 5601 | HTTP 
-asampleapp | - | - 
+ asampleapp | - | - 
 
 Then you have to feed elasticsearch via logstash: `echo "abc" | nc localhost 5000`. 
 
