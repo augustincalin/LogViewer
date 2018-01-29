@@ -13,7 +13,7 @@ Run `docker-compose up`. This will launch XXX containers: Elasticsearch, Logstas
  Elasticsearch (http) | 9200 | HTTP
  Logstash (input) | 5000 | TCP
  Kibana | 5601 | HTTP 
- asampleapp |  |  
+ asampleapp | x | x 
 
 Then you have to feed elasticsearch via logstash: `echo "abc" | nc localhost 5000`. 
 
