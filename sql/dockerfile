@@ -1,0 +1,13 @@
+FROM microsoft/mssql-server-linux:2017-latest
+
+RUN mkdir /var/opt/sqlserver
+
+COPY D4G_Logging.mdf /var/opt/sqlserver
+
+COPY D4G_Logging_log.ldf /var/opt/sqlserver
+
+ENV SA_PASSWORD=saFZ_edekk1
+
+ENV ACCEPT_EULA=Y
+
+HEALTHCHECK --interval=10s CMD /opt/mssql-tools/bin/sqlcmd -S . -U sa -P saFZ_edekk1 -Q "CREATE DATABASE [D4G_Logging] ON (FILENAME = '/var/opt/sqlserver/D4G_Logging.mdf'),(FILENAME = '/var/opt/sqlserver/D4G_Logging_log.ldf') FOR ATTACH"
