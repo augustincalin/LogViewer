@@ -19,7 +19,7 @@ services:
       - net
 
   logstash:
-    image: docker.elastic.co/logstash/logstash-oss:6.1.2
+    image: logstash
     container_name: logstash
     volumes:
       - ./es/logstash/pipeline:/usr/share/logstash/pipeline:ro
@@ -48,6 +48,8 @@ services:
   debian1:
     image: asampleapp
     container_name: asampleapp
+    volumes:
+      - ./es/filebeat/config:/etc/filebeat
     command: tail -f /dev/null
     networks:
       - net

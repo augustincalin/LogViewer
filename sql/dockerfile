@@ -1,5 +1,13 @@
 FROM microsoft/mssql-server-linux:2017-latest
 
+# RUN mkdir /usr/jdbc
+
+# COPY sqljdbc_6.0.8112.100_enu.tar.gz /usr/jdbc
+
+# RUN gzip -d /usr/jdbc/sqljdbc_6.0.8112.100_enu.tar.gz
+
+# RUN tar -xf /usr/jdbc/sqljdbc_6.0.8112.100_enu.tar
+
 RUN mkdir /var/opt/sqlserver
 
 COPY D4G_Logging.mdf /var/opt/sqlserver
