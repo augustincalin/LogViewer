@@ -1,0 +1,42 @@
+{
+  "_index": "asa_log",
+  "_type": "doc",
+  "_id": "085ozWEBbWm5aI9e44mA",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "@version": "1",
+    "host": "d9ed200212d9",
+    "Level": "FATAL",
+    "log_timestamp": "2018-02-25 14:40:45",
+    "tags": [
+      "debian1",
+      "beats_input_codec_plain_applied"
+    ],
+    "fields": {
+      "env": "production",
+      "document_type": "asa_log"
+    },
+    "prospector": {
+      "type": "log"
+    },
+    "@timestamp": "2018-02-25T14:40:52.669Z",
+    "message": "[2018-02-25 14:40:45] - FATAL bad thuing happen \nSystem.Exception: bad thuing happen\n   at ASampleApp.Program.Main(String[] args) in /app/Program.cs:line 41",
+    "offset": 325,
+    "Exception": "bad thuing happen \nSystem.Exception: bad thuing happen\n   at ASampleApp.Program.Main(String[] args) in /app/Program.cs:line 41",
+    "beat": {
+      "hostname": "d9ed200212d9",
+      "version": "6.1.3",
+      "name": "d9ed200212d9"
+    },
+    "source": "/app/logging.log"
+  },
+  "fields": {
+    "@timestamp": [
+      "2018-02-25T14:40:52.669Z"
+    ]
+  },
+  "sort": [
+    1519569652669
+  ]
+}

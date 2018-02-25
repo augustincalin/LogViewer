@@ -42,8 +42,8 @@
         Sources <span class="caret"></span>
       </button>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li role="menuitem" *ngFor="let source of sources">
-          <a class="dropdown-item" href="#">{{source.index}}</a>
+        <li role="menuitem" *ngFor="let source of sources; let i = index;">
+          <a class="dropdown-item" href="#" (click)="sourceChecked(i)"><span class="fas fa-check" [hidden]="!source.checked"></span> {{source.index}}</a>
         </li>
       </ul>
     </div>
@@ -57,7 +57,7 @@
 </div>
 
   <div class="row mt-5" *ngFor="let result of results?.hits?.hits">
-    <div class="col-md-1">{{result._source['@timestamp']}}</div>
-    <div class="col-md-9">{{result._source.description}}</div>
-    <div class="col-md-2">Source #1</div>
+    <div class="col-md-1">{{result._source['@timestamp'] | date:'medium'}}</div>
+    <div class="col-md-9">{{result._source.message}}</div>
+    <div class="col-md-2">{{result._index}}</div>
   </div>

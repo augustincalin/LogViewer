@@ -1,0 +1,43 @@
+{
+  "_index": "asw_log",
+  "_type": "doc",
+  "_id": "kZJoymEBfCD9P_2hhmWx",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "Message": "Connection id \"0HLBRSMA9VTLM\" stopped.",
+    "fields": {
+      "env": "production",
+      "document_type": "asw_log"
+    },
+    "offset": 19783,
+    "@timestamp": "2018-02-25T00:41:41.295Z",
+    "tags": [
+      "host",
+      "beats_input_codec_plain_applied"
+    ],
+    "Level": "DEBUG",
+    "Logger": "Microsoft.AspNetCore.Server.Kestrel",
+    "message": "2018-02-25 01:41:31.3737||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id \"0HLBRSMA9VTLM\" stopped.|",
+    "beat": {
+      "hostname": "ALIEN-2",
+      "name": "ALIEN-2",
+      "version": "6.2.1"
+    },
+    "log_timestamp": "2018-02-25 01:41:31.3737",
+    "host": "ALIEN-2",
+    "@version": "1",
+    "source": "c:\\temp\\nlog-all-2018-02-25.log",
+    "prospector": {
+      "type": "log"
+    }
+  },
+  "fields": {
+    "@timestamp": [
+      "2018-02-25T00:41:41.295Z"
+    ]
+  },
+  "sort": [
+    1519519301295
+  ]
+}

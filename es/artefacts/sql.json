@@ -1,0 +1,38 @@
+{
+  "_index": "sql_log",
+  "_type": "doc",
+  "_id": "20625",
+  "_version": 514,
+  "_score": null,
+  "_source": {
+    "@version": "1",
+    "createdlocal": "2018-01-30T16:27:53.803Z",
+    "stacktrace": "Microsoft.Extensions.Logging.ILogger.Log<TState> at offset 119 in file:line:column <filename unknown>:0:0\r\n",
+    "errorcode": null,
+    "severity": "Error",
+    "createdby": "WinDMS",
+    "linenumber": 0,
+    "hostname": "LOMOOFSV09",
+    "sourcedetails": "Microsoft.Extensions.Logging.ILogger.Log",
+    "databasename": "D4G_Logging",
+    "description": "Executed action D4G.PlausibilitiesService.PlausibilityController.ValidateDateNotInFuture (D4G.PlausibilitiesService) in 290.0927ms",
+    "@timestamp": "2018-02-25T17:44:39.895Z",
+    "message": "20625 WinDMS 2018-01-30T16:27:53.803Z  Executed action D4G.PlausibilitiesService.PlausibilityController.ValidateDateNotInFuture (D4G.PlausibilitiesService) in 290.0927ms Microsoft.Extensions.Logging.ILogger.Log LOMOOFSV09 D4G_Logging Executed action D4G.PlausibilitiesService.PlausibilityController.ValidateDateNotInFuture (D4G.PlausibilitiesService) in 290.0927ms Microsoft.Extensions.Logging.ILogger.Log<TState> at offset 119 in file:line:column <filename unknown>:0:0\r\n %{additionalinformation} 0 %{errorcode} Error",
+    "application": "",
+    "additionalinformation": null,
+    "type": "sql",
+    "id": 20625,
+    "source": "Executed action D4G.PlausibilitiesService.PlausibilityController.ValidateDateNotInFuture (D4G.PlausibilitiesService) in 290.0927ms"
+  },
+  "fields": {
+    "createdlocal": [
+      "2018-01-30T16:27:53.803Z"
+    ],
+    "@timestamp": [
+      "2018-02-25T17:44:39.895Z"
+    ]
+  },
+  "sort": [
+    1519580679895
+  ]
+}

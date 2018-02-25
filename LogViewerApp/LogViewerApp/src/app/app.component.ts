@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   searchTerm$ = new Subject<string>();
   subscription: Observable<string>;
   results: any;
-  sources: any;
-  
+  sources: any[];
+
   constructor(private esService: ElasticsearchService) {
     this.subscription = this.searchTerm$.debounceTime(1000).distinctUntilChanged().switchMap(term => this.doSomething(term));
   }
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     });
 
     this.esService.getIndices().subscribe(data => {
-      this.sources = data;
+      this.sources = data.map(d => { return { index: d.index, checked: false }; });
     });
   }
   onKeyUp(event) {
@@ -40,6 +40,11 @@ export class AppComponent implements OnInit {
   }
 
   doSomething(term: string) {
-    return this.esService.fullTextSearch('', '', 'message', term);
+    return this.esService.fullTextSearch(this.sources.filter(s => s.checked).map(s => s.index), '', 'message', term);
+  }
+
+  sourceChecked(i) {
+    let newElement: any = { index: this.sources[i].index, checked: !this.sources[i].checked };
+    this.sources[i] = newElement;
   }
 }

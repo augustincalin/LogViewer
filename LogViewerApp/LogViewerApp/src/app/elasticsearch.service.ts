@@ -23,7 +23,7 @@ export class ElasticsearchService {
     return this.client.search({
       index: index,
       type: type,
-      filterPath: ['hits.hits._source', 'hits.total', '_scroll_id'],
+      //storedFields: ['_index'],
       body: {
         'query': {
           'match_phrase_prefix': {

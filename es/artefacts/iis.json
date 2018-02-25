@@ -1,0 +1,60 @@
+{
+  "_index": "iis_log",
+  "_type": "doc",
+  "_id": "ZJJVymEBfCD9P_2h6WXI",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "SC-SubStatus": "0",
+    "fields": {
+      "env": "production",
+      "document_type": "iis_log"
+    },
+    "S-ComputerName": "ALIEN-2",
+    "CS-UserAgent": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/58.0.3029.110+Safari/537.36+Edge/16.16299",
+    "CS-Cookie": "-",
+    "CS-Host": "www.asampleweb.com",
+    "tags": [
+      "host",
+      "beats_input_codec_plain_applied"
+    ],
+    "SC-Bytes": "597",
+    "message": "2018-02-25 00:20:34 W3SVC2 ALIEN-2 127.0.0.1 GET /api/SampleData/WeatherForecasts - 80 - 127.0.0.1 HTTP/1.1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/58.0.3029.110+Safari/537.36+Edge/16.16299 - http://www.asampleweb.com/fetch-data www.asampleweb.com 200 0 0 597 439 627",
+    "CS-Referer": "http://www.asampleweb.com/fetch-data",
+    "beat": {
+      "hostname": "ALIEN-2",
+      "name": "ALIEN-2",
+      "version": "6.2.1"
+    },
+    "S-IP": "127.0.0.1",
+    "CS-URI-Stem": "/api/SampleData/WeatherForecasts",
+    "log_timestamp": "2018-02-25 00:20:34",
+    "CS-Method": "GET",
+    "@version": "1",
+    "querystring": "-",
+    "prospector": {
+      "type": "log"
+    },
+    "SC-Status": "200",
+    "Time-Taken": "627",
+    "offset": 2167,
+    "@timestamp": "2018-02-25T00:21:15.955Z",
+    "S-SiteName": "W3SVC2",
+    "CS-Version": "HTTP/1.1",
+    "CS-Bytes": "439",
+    "S-Port": "80",
+    "SC-Win32-Status": "0",
+    "CS-Username": "-",
+    "C-IP": "127.0.0.1",
+    "host": "ALIEN-2",
+    "source": "c:\\inetpub\\logs\\LogFiles\\W3SVC2\\u_ex180225.log"
+  },
+  "fields": {
+    "@timestamp": [
+      "2018-02-25T00:21:15.955Z"
+    ]
+  },
+  "sort": [
+    1519518075955
+  ]
+}

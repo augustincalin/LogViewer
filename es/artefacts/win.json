@@ -1,0 +1,61 @@
+{
+  "_index": "win_log",
+  "_type": "doc",
+  "_id": "as4PzmEBbWm5aI9eu4rj",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "host": "ALIEN-2",
+    "log_name": "Security",
+    "tags": [
+      "web-server",
+      "beats_input_codec_plain_applied"
+    ],
+    "level": "Informationen",
+    "provider_guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+    "source_name": "Microsoft-Windows-Security-Auditing",
+    "event_data": {
+      "TargetUserName": "gusti",
+      "CallerProcessId": "0x5d4",
+      "CallerProcessName": "C:\\Program Files\\Notepad++\\notepad++.exe",
+      "SubjectDomainName": "ALIEN-2",
+      "SubjectUserSid": "S-1-5-21-537709120-1221304909-1910201611-1001",
+      "TargetSid": "S-1-5-21-537709120-1221304909-1910201611-1001",
+      "SubjectLogonId": "0x37370",
+      "SubjectUserName": "gusti",
+      "TargetDomainName": "ALIEN-2"
+    },
+    "thread_id": 26432,
+    "process_id": 944,
+    "@timestamp": "2018-02-25T17:43:07.637Z",
+    "message": "Die lokale Gruppenmitgliedschaft eines Benutzers wurde aufgezählt.\n\nAntragsteller:\n\tSicherheits-ID:\t\tS-1-5-21-537709120-1221304909-1910201611-1001\n\tKontoname:\t\tgusti\n\tKontodomäne:\t\tALIEN-2\n\tAnmelde-ID:\t\t0x37370\n\nBenutzer:\n\tSicherheits-ID:\t\tS-1-5-21-537709120-1221304909-1910201611-1001\n\tKontoname:\t\tgusti\n\tKontodomäne:\t\tALIEN-2\n\nProzessinformationen:\n\tProzess-ID:\t\t0x5d4\n\tProzessname:\t\tC:\\Program Files\\Notepad++\\notepad++.exe",
+    "type": "wineventlog",
+    "event_id": 4798,
+    "@version": "1",
+    "record_number": "89596",
+    "fields": {
+      "env": "production",
+      "document_type": "win_log"
+    },
+    "keywords": [
+      "Überwachung erfolgreich"
+    ],
+    "computer_name": "ALIEN-2",
+    "task": "Benutzerkontenverwaltung",
+    "activity_id": "{D18019F5-2F55-4DE2-97FF-F29276046AD7}",
+    "opcode": "Info",
+    "beat": {
+      "hostname": "ALIEN-2",
+      "version": "6.1.3",
+      "name": "ALIEN-2"
+    }
+  },
+  "fields": {
+    "@timestamp": [
+      "2018-02-25T17:43:07.637Z"
+    ]
+  },
+  "sort": [
+    1519580587637
+  ]
+}
