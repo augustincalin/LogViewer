@@ -5,19 +5,23 @@ input{
         jdbc_connection_string => "jdbc:sqlserver://sql-server;user=sa;password=saFZ_edekk1;databaseName=D4G_Logging"
         jdbc_user => "sa"
         jdbc_password => "saFZ_edekk1"
-        parameters => { "favorite_artist" => "Beethoven" }
         schedule => "* * * * *"
-        statement => "SELECT SL.[ID] as ID,[CreatedBy],[CreatedLocal],[Application],[Source],[SourceDetails],[HostName],[DatabaseName],SL.[Description],[StackTrace],[AdditionalInformation],[LineNumber],[ErrorCode],[Severity], S.Name as Severity FROM [Logging].[SystemLog] SL left join LoggingLookup.Severity S on SL.Severity = S.Value"
-        tracking_column => "ID"
-        use_column_value => true
+        statement => "select sl.[id] as id,[createdby],[createdlocal],[application],[source],[sourcedetails],[hostname],[databasename],sl.[description],[stacktrace],[additionalinformation],[linenumber],[errorcode],[severity], s.name as severity from [logging].[systemlog] sl left join logginglookup.severity s on sl.severity = s.value"
+        type => "sql"
   }
 
 }
 filter{
+
+    mutate {
+        add_field => { "[@metadata][beat]" => "sql"}
+        add_field => {"[@metadata][document_id]" => "%{id}"}
+    }
 }
 output {
     elasticsearch{
         hosts => ["http://elasticsearch:9200"]
         index => "sql_log-%{+YYYY.MM.dd}"
+        document_id => "%{[@metadata][document_id]}"
     }
 }

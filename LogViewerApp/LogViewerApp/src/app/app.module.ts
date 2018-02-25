@@ -8,6 +8,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NouisliderModule } from 'ng2-nouislider';
 
 import { AppComponent } from './app.component';
+import { ElasticsearchService } from './elasticsearch.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { AppComponent } from './app.component';
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [ElasticsearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
