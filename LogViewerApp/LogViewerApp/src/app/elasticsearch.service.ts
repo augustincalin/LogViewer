@@ -26,8 +26,13 @@ export class ElasticsearchService {
       //storedFields: ['_index'],
       body: {
         'query': {
-          'match_phrase_prefix': {
-            [field]: queryText,
+          'match': {
+            [field]: queryText
+          }
+        },
+        'highlight': {
+          'fields': {
+            [field]: {}
           }
         }
       },

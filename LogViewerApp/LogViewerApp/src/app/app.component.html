@@ -56,8 +56,12 @@
   </div>
 </div>
 
-  <div class="row mt-5" *ngFor="let result of results?.hits?.hits">
-    <div class="col-md-1">{{result._source['@timestamp'] | date:'medium'}}</div>
-    <div class="col-md-9">{{result._source.message}}</div>
-    <div class="col-md-2">{{result._index}}</div>
-  </div>
+<div class="row mt-5" *ngIf="results">
+  <div class="col-md-12">{{results?.hits?.total || 0}} results in {{results?.took}}ms</div>
+</div>
+
+<div class="row mt-3" *ngFor="let result of results?.hits?.hits">
+  <div class="col-md-1"><small>{{result._source['@timestamp'] | date:'short'}}</small></div>
+  <div class="col-md-10" [innerHTML]="result._source.message | safeHtml"></div>
+  <div class="col-md-1 text-right"><small>{{result._index}}</small></div>
+</div>

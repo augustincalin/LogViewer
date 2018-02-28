@@ -6,6 +6,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { Safe } from './safeHtml.pipe';
 
 @Component({
   selector: 'lv-root',
