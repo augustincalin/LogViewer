@@ -27,7 +27,10 @@ export class ElasticsearchService {
       body: {
         'query': {
           'match': {
-            [field]: queryText
+            [field]: {
+              'query': queryText,
+              'analyzer': 'standard'
+            }
           }
         },
         'highlight': {

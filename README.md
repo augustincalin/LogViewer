@@ -42,7 +42,9 @@ In order to connect to the container, execute `docker exec -it asampleapp bash` 
 Also don't forget to start the filebeat service on this image: `service filebeat start`
 
 After that you can use kibana to define an index and see the data: http://localhost:5601.
-
+##### Elasticsearch analyzers
+In order to search as you type you have to execute first `curl -XDELETE "localhost:9200/INDEX_NAME?pretty"` and then `curl -XPUT 'localhost:9200/INDEX_NAME?pretty' -H 'Content-Type: application/json' --data-binary '@PATH_TO_FILE'`. Instead of INDEX_NAME you have to use the actual index names; instead of PATH_TO_FILE use the path to /es/artefacts/analyzer.curl: asw_log, iis_log, sql_log, win_log and asa_log.  
+After the indexes are created by beats, run `curl -XPUT 'localhost:9200/INDEX_NAME/_mapping/TYPE_NAME?pretty' -H 'Content-Type: application/json' --data-binary '@PATH_TO_FILE'`
 
 #### Usefull commands
 - `docker exec -it container_name` bash to connect to the container with the name _container_name_
@@ -50,3 +52,4 @@ After that you can use kibana to define an index and see the data: http://localh
 - `docker container run --name container_name image_name` starts a container with the name _container_name_ from the image _image_name_
 - `docker inspect container_name` to find the IP address of specified container
 - `logstash -f test.config<data` to test grok against logstash
+- `curl -XGET "localhost:9200/sql_log/_mapping/doc?pretty"` to get the mapping for an index for a type

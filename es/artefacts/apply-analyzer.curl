@@ -1,0 +1,10 @@
+{
+    "doc": {
+        "properties": {
+            "message": {
+                "type": "text",
+                "analyzer": "autocomplete"
+            }
+        }
+    }
+}
